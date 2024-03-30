@@ -1,95 +1,43 @@
 ---------------------------------------------------
 SKILLS
 ----------
-
-LANGUAGES
-----------
-Natural Language Processing
-Visual Studies & Art History (Minor)
-University Calgary
-Generative Art
-Media Arts: Practice & Theory
-Drawing
-2D & 3D Fundamentals
-Painting: Figuration
-
-SOFTWARE
-----------
-Software Test Specialist Co-op
-Magnet Forensics
-5May 2023 - December 2023
-Implemented testing strategys Magnets AXIOM Corporate Products.
-Worked closely developers creating
-quality products help create cases corporate litigation.
-Speci/uniFB01cally, I worked features UI test automation
-using Test Studio, running automation Jenkins, working DevOps jobs times, manually testing
-products.
-Front House Salesperson
-Pie Junkie
-5July 2020 - July 2021
-Worked handling customers person, online, phone, organizing front, packing orders, baking
-pies.
-Stage Manager
-Calgary Young Peoples Theatre
-5August 2017 - May 2018
-Stage Managed play cannonball festival volunteer stage manager.
-Organized actors technical elements
-show.
-Summer Camp Skating Instructor
-
-COURSES
-----------
-B.Sc.
-Computer Science (Major)
-University Calgary
-Completed
-Design & Analysis Algorithms
-Arti/uniFB01cial Intelligence
-Reverse engineering
-Principle Operating Systems
-
-EDUCATION
-----------
-Westside Recreation Centre
-5June 2017 - February 2018
-Volunteered kids ages 3-12, helped coordinate activities assisted councillors.
-In winter I taught basics
-skating hockey children parents.
-
-PROJECTS
-----------
-Meowdoku
-Android Sudoku app designed using Unity Engine
-Unity API.
-All hand-drawn assets UI.
-Sudoku solver programmed
-system.
-Learned C# Unity API
-https:/ /github.com/kayleenasser/Meowdoku
-Command Line Sudoku
-Basic Sudoku game runs command line
-Code includes Sudoku solver/generator
-Henry Bot
-A discord bot used play music YouTube voice calls.
-Made friends.
-Learned Youtube Discord API
-MeowioKart
-A 2D pixel game based around MarioKart programmed exclusively C.
-Every pixel programmed manually.
-Program runs Raspberry Pi.
-Visuals drawn converted code GIMP.
-
-AWARDS
-----------
-High School Advanced Placement Art Award - June 2019,
-2020
-
-HONOURS
-----------
-High School Academic Honors Distinction Award - June
-2018, 2019, 2020
+Taught elementary junior high girls skills programming, video game development, web
+design.
 
 EXPERIENCE
 ----------
-WORK EXPERIENCE
+Programming Experience
+AI Researcher July - August 2021
+University Washington Seattle, Washington
+Worked Partners Health local Seattle non-profit, Medic Mobile help create reliable
+routing triage systems door-to-door healthcare workers.
+
+LANGUAGES
+----------
+Programming langauges Proficient Python, Java, C, C++
+
+EDUCATION
+----------
+Bachelors degree Computer Science University Calgary
+
+HONOURS
+----------
+Honours Bachelors degree program September 2019 - April 2024
+GPA: 3.8/4.0
+
+COURSES
+----------
+Attended four-week long intensive course supervised, unsupervised, reinforcement learning.
+Programmed computer vision algorithm would detect waste photos create comprehensive map litter help facilitate community clean ups.
+
+PUBLICATIONS
+----------
+Utilized classical AI techniques machine learning techniques create applications.
+Research Fellow May - June 2021
+AI4Good Labs Edmonton, Alberta
+
+AWARDS
+----------
+Lockhart Computer Science Award For outstanding research academic performance
+Deans List For high academic performance
 

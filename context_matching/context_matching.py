@@ -14,7 +14,7 @@ def get_w2v_model():
 def get_w2v_training_data():
     training_data = []
 
-    with open('context_matching/monster_com-job_sample.csv', newline='') as csvfile:
+    with open('context_matching/monster_com-job_sample.csv', newline='', encoding="utf8") as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             sector = row['sector'].lower()
