@@ -30,7 +30,7 @@ def parse_resume(path):
                 for sentence_token in sentence_token.split("\n"): # split by newline
                     sentence_token = ' '.join([word for word in sentence_token.split() if word not in stopwords]) # remove stopwords
                     sentence_token = ''.join(filter(lambda x: x in printable, sentence_token)) # remove non-ascii characters like jot points
-                    file.write(sentence_token + "\n")
+                    #file.write(sentence_token + "\n")
                     for header in HEADERS: 
                         if header == sentence_token.lower() or fuzz.partial_ratio(header, sentence_token.lower()) > 75: # check if sentence contains a header
                             active_header = header
