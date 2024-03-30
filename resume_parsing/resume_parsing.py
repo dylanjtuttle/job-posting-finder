@@ -19,26 +19,28 @@ def parse_resume(path):
 
     with open(output_path, 'w', encoding='utf-8') as file:
         reader = PdfReader(path)
-        header_dict = {}
         number_of_pages = len(reader.pages)
+        lines = []
         for i in range(number_of_pages):
             page = reader.pages[i]
             pdf_text = page.extract_text()
-            active_header = ""
             pdf_text = re.sub(r'-\n', '', pdf_text) # remove hyphenated words
             for sentence_token in sent_tokenize(pdf_text): # split by sentence
                 for sentence_token in sentence_token.split("\n"): # split by newline
                     sentence_token = ' '.join([word for word in sentence_token.split() if word not in stopwords]) # remove stopwords
                     sentence_token = ''.join(filter(lambda x: x in printable, sentence_token)) # remove non-ascii characters like jot points
-                    #file.write(sentence_token + "\n")
-                    for header in HEADERS: 
-                        if header == sentence_token.lower() or fuzz.partial_ratio(header, sentence_token.lower()) > 75: # check if sentence contains a header
-                            active_header = header
-                            header_dict[active_header] = []
-                    if active_header != "" and sentence_token.lower() not in HEADERS:
-                        header_dict[active_header].append(sentence_token)
+                    lines.append(sentence_token)
+        header_dict = {}
+        active_header = ''
+        header_dict[active_header] = []
+        for line in lines:
+            for header in HEADERS: 
+                if header == line.lower() or fuzz.partial_ratio(header, line.lower()) > 75: # check if sentence contains a header
+                    active_header = header
+                    header_dict[active_header] = []
+            if active_header != '' and header != line.lower() or fuzz.partial_ratio(header, line.lower()) <= 75:
+                header_dict[active_header].append(line)
 
-        file.write("---------------------------------------------------\n")
         for header in header_dict:
             file.write(header.upper() + "\n----------\n")
             for sentence in header_dict[header]:

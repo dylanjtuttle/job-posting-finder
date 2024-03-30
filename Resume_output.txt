@@ -1,4 +1,8 @@
----------------------------------------------------
+
+----------
+Rachel H. Ralph
+E-mail: rachel.ralph@ucalgary.ca Telephone number: 587-999-8612
+
 SKILLS
 ----------
 Taught elementary junior high girls skills programming, video game development, web
@@ -18,6 +22,7 @@ Programming langauges Proficient Python, Java, C, C++
 
 EDUCATION
 ----------
+Education
 Bachelors degree Computer Science University Calgary
 
 HONOURS
