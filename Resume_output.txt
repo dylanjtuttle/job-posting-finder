@@ -1,0 +1,43 @@
+---------------------------------------------------
+SKILLS
+----------
+Taught elementary junior high girls skills programming, video game development, web
+design.
+
+EXPERIENCE
+----------
+Programming Experience
+AI Researcher July - August 2021
+University Washington Seattle, Washington
+Worked Partners Health local Seattle non-profit, Medic Mobile help create reliable
+routing triage systems door-to-door healthcare workers.
+
+LANGUAGES
+----------
+Programming langauges Proficient Python, Java, C, C++
+
+EDUCATION
+----------
+Bachelors degree Computer Science University Calgary
+
+HONOURS
+----------
+Honours Bachelors degree program September 2019 - April 2024
+GPA: 3.8/4.0
+
+COURSES
+----------
+Attended four-week long intensive course supervised, unsupervised, reinforcement learning.
+Programmed computer vision algorithm would detect waste photos create comprehensive map litter help facilitate community clean ups.
+
+PUBLICATIONS
+----------
+Utilized classical AI techniques machine learning techniques create applications.
+Research Fellow May - June 2021
+AI4Good Labs Edmonton, Alberta
+
+AWARDS
+----------
+Lockhart Computer Science Award For outstanding research academic performance
+Deans List For high academic performance
+

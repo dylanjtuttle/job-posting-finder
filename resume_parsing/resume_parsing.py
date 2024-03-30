@@ -45,5 +45,3 @@ def parse_resume(path):
                 file.write(sentence + "\n")
             file.write("\n")
     return header_dict
-
-parse_resume("ExampleResumes/Rachel_Resume.pdf")
