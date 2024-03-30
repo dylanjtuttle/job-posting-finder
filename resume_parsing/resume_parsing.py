@@ -15,7 +15,7 @@ stopwords = stopwords.words('english')
 printable = set(string.printable)
 
 def parse_resume(path):
-    HEADERS = ['experience', 'education', 'interests', 'software', 'publications', 'skills', 'accomplishments', 'certifications', 'awards', 'honours', 'courses', 'projects', 'objectives', 'languages', 'leadership']
+    HEADERS = ['experience', 'education', 'interests', 'software', 'programming languages', 'programming experience', 'publications', 'skills', 'accomplishments', 'certifications', 'awards', 'honours', 'courses', 'projects', 'objectives', 'languages', 'leadership']
 
     with open(output_path, 'w', encoding='utf-8') as file:
         reader = PdfReader(path)
@@ -34,14 +34,22 @@ def parse_resume(path):
         active_header = ''
         header_dict[active_header] = []
         for line in lines:
-            for header in HEADERS: 
-                if header == line.lower() or fuzz.partial_ratio(header, line.lower()) > 75: # check if sentence contains a header
-                    active_header = header
+            if line.lower() in HEADERS:
+                active_header = line.lower()
+                header_dict[active_header] = []
+                continue
+            for header in HEADERS:
+                if fuzz.ratio(header, line.lower()) > 75:
+                    active_header = line.lower()
                     header_dict[active_header] = []
-            if active_header != '' and header != line.lower() or fuzz.partial_ratio(header, line.lower()) <= 75:
-                header_dict[active_header].append(line)
+                    break 
+            if active_header == line.lower():
+                continue
+            header_dict[active_header].append(line)
 
         for header in header_dict:
+            if header == '':
+                continue
             file.write(header.upper() + "\n----------\n")
             for sentence in header_dict[header]:
                 file.write(sentence + "\n")
