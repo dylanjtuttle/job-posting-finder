@@ -10,6 +10,8 @@ Honours Bachelors degree program September 2019 - April 2024
 GPA: 3.8/4.0
 Took courses AI techniques, operating systems embedded programming, data structures.
 Learned practical skills using IDEs GitHub.
+Lockhart Computer Science Award For outstanding research academic performance
+Deans List For high academic performance
 
 EXPERIENCE
 ----------
@@ -26,9 +28,6 @@ Summer Camp Leader June 2018 - August 2019
 Minds Motion Summer Camps Calgary, Alberta
 Taught elementary junior high girls skills programming, video game development, web
 design.
-
-PROGRAMMING EXPERIENCE
-----------
 AI Researcher July - August 2021
 University Washington Seattle, Washington
 Worked Partners Health local Seattle non-profit, Medic Mobile help create reliable
@@ -38,9 +37,4 @@ Research Fellow May - June 2021
 AI4Good Labs Edmonton, Alberta
 Attended four-week long intensive course supervised, unsupervised, reinforcement learning.
 Programmed computer vision algorithm would detect waste photos create comprehensive map litter help facilitate community clean ups.
-
-AWARDS
-----------
-Lockhart Computer Science Award For outstanding research academic performance
-Deans List For high academic performance
 

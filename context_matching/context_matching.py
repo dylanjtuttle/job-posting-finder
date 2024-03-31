@@ -25,21 +25,9 @@ def context_matching(resume_dict, job_postings, w2v_model):
 
         # 'experience'
         # 'education'
-        # 'interests'
-        # 'software'
-        # 'programming languages'
-        # 'programming experience'
-        # 'publications'
         # 'skills'
-        # 'accomplishments'
-        # 'certifications'
-        # 'awards'
-        # 'honours'
-        # 'courses'
         # 'projects'
-        # 'objectives'
-        # 'languages'
-        # 'leadership'
+        # 'certifications'
 
         # Get the job title from the posting
         posting_title = posting["title"]
@@ -66,12 +54,6 @@ def context_matching(resume_dict, job_postings, w2v_model):
             if average > best_score:
                 best_score = average
                 best_posting = posting
-
-                print(average)
-                print(posting)
-            else:
-                print(best_score)
-                print(best_posting)
 
     return postings_with_score
 
