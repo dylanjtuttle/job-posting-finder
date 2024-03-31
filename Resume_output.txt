@@ -11,7 +11,7 @@ GPA: 3.8/4.0
 Took courses AI techniques, operating systems embedded programming, data structures.
 Learned practical skills using IDEs GitHub.
 
-WORK EXPERIENCE
+EXPERIENCE
 ----------
 Teaching Assistant January 2022 - Present
 University Calgary Calgary, Alberta

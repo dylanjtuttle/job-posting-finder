@@ -104,7 +104,7 @@ def webscrape_page(jobs, home_url):
 
         details =  description_soup.find_all("div", {"class": "rf_tag u_mb-xxs u_mr-xxs"})
         details = [detail.text for detail in details]
-        details.append([extra_detail.text for extra_detail in description_soup.find_all("a", {"class": "rf_tag u_mb-xxs u_mr-xxs"})])
+        details += [extra_detail.text for extra_detail in description_soup.find_all("a", {"class": "rf_tag u_mb-xxs u_mr-xxs"})]
 
         job_dict["descrip"] = job_descrip.text
 

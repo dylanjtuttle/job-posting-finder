@@ -14,7 +14,7 @@ def main():
     postings = ab_postings + bc_postings
 
     # Get w2v model for help with context matching
-    w2v_model = get_w2v_model()
+    w2v_model = get_w2v_model(resume_dict, postings)
 
     # Perform context matching
     postings_with_score = context_matching(resume_dict, postings, w2v_model)
