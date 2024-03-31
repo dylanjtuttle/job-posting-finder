@@ -36,17 +36,18 @@ def parse_resume(path):
         active_header = ''
         header_dict[active_header] = []
         for line in lines:
-            if line.lower() in HEADERS:
-                active_header = line.lower()
-                header_dict[active_header] = []
-                continue
             for header in HEADERS:
+                if line.lower() == header:
+                    active_header = header
+                    header_dict[active_header] = []
+                    break
                 if fuzz.ratio(header, line.lower()) > 75:
-                    active_header = line.lower()
+                    active_header = header
                     header_dict[active_header] = []
                     break 
-            if active_header == line.lower():
+            if active_header == line.lower() or fuzz.ratio(header, line.lower()) > 75:
                 continue
+            
             header_dict[active_header].append(line)
 
         for header in header_dict:
