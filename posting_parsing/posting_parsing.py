@@ -1,7 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
-import pickle
+import json
 import sys
+import datetime
+import os
 
 # Given a url for either the Alberta or BC jobs website (and a filename to pickle the data into)
 # return a list of dictionaries with the following keys:
@@ -11,12 +13,29 @@ import sys
     # "location"
     # "descrip"
     # "details"
-def webscrape_site(home_url, filename):
+def get_job_data_from_site(home_url, filename):
+    # If we've already pickled this particular dataset
+    if os.path.isfile(filename) and os.path.getsize(filename) > 0:
+        try:
+            f = open(filename, "rb")
+            data = json.load(f)
+            f.close()
+            if data["date"] == datetime.datetime.now().strftime("%d/%m/%Y"):
+                return data["job_list"]
+            else:
+                return webscrape_site(home_url, filename)
+        except:
+            return webscrape_site(home_url, filename)
+    else:
+        return webscrape_site(home_url, filename)
+
+
+def webscrape_site(home_url, filename):  
     job_list = []
 
     page_url = home_url + "/search-jobs?q=software+development&location=#page=1"
 
-    print(f"Hold tight, scraping job postings from {home_url}...")
+    print(f"Scraping job postings from {home_url}...")
     while True:
         jobs = []
         
@@ -33,14 +52,14 @@ def webscrape_site(home_url, filename):
         next_button = soup.find("a", attrs={"class": "btn btn-custom btn-default btn-sm" , "alt": "Next"})
 
         if next_button == None: 
-            # f = open(filename, "wb")
-            # sys.setrecursionlimit(100000)
-            # pickle.dump(job_list, f)
-            # f.close()
+            f = open(filename, "w")
+            # sys.setrecursionlimit(10000000)
+            nice_data = {}
+            json.dump({"date": datetime.datetime.now().strftime("%d/%m/%Y"), "job_list": job_list}, f)
+            f.close()
             return job_list
 
         page_url = home_url + next_button["href"]
-        # print(page_url)
 
 
 #Takes a list of jobs for alberta job board. 
@@ -84,7 +103,8 @@ def webscrape_page(jobs, home_url):
 
 
         details =  description_soup.find_all("div", {"class": "rf_tag u_mb-xxs u_mr-xxs"})
-        details.append(description_soup.find_all("a", {"class": "rf_tag u_mb-xxs u_mr-xxs"}))
+        details = [detail.text for detail in details]
+        details.append([extra_detail.text for extra_detail in description_soup.find_all("a", {"class": "rf_tag u_mb-xxs u_mr-xxs"})])
 
         job_dict["descrip"] = job_descrip.text
 

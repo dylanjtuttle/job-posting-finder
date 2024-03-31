@@ -15,6 +15,8 @@ stopwords = stopwords.words('english')
 printable = set(string.printable)
 
 def parse_resume(path):
+    print("Hold tight, parsing your resume...")
+
     HEADERS = ['experience', 'education', 'interests', 'software', 'programming languages', 'programming experience', 'publications', 'skills', 'accomplishments', 'certifications', 'awards', 'honours', 'courses', 'projects', 'objectives', 'languages', 'leadership']
 
     with open(output_path, 'w', encoding='utf-8') as file:
