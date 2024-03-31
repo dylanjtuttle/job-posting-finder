@@ -7,6 +7,7 @@ from PyPDF2 import PdfReader
 from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize
 from nltk.corpus import stopwords
+from resume_parsing.headers import HEADERS, EDUCATION_HEADERS, EXPERIENCE_HEADERS, SKILLS_HEADERS, PROJECT_HEADERS, CERTIFICATION_HEADERS
 import string
 import re
 
@@ -16,9 +17,6 @@ printable = set(string.printable)
 
 def parse_resume(path):
     print("Hold tight, parsing your resume...")
-
-    HEADERS = ['experience', 'education', 'interests', 'software', 'programming languages', 'programming experience', 'publications', 'skills', 'accomplishments', 'certifications', 'awards', 'honours', 'courses', 'projects', 'objectives', 'languages', 'leadership']
-
     with open(output_path, 'w', encoding='utf-8') as file:
         reader = PdfReader(path)
         number_of_pages = len(reader.pages)
@@ -34,20 +32,47 @@ def parse_resume(path):
                     lines.append(sentence_token)
         header_dict = {}
         active_header = ''
+        found_header = False
         header_dict[active_header] = []
         for line in lines:
             for header in HEADERS:
                 if line.lower() == header:
-                    active_header = header
-                    header_dict[active_header] = []
+                    found_header = True
+                    if header in EDUCATION_HEADERS:
+                        active_header = 'education'
+                    elif header in EXPERIENCE_HEADERS:
+                        active_header = 'experience'
+                    elif header in SKILLS_HEADERS:
+                        active_header = 'skills'
+                    elif header in PROJECT_HEADERS:
+                        active_header = 'projects'
+                    elif header in CERTIFICATION_HEADERS:
+                        active_header = 'certifications'
+                    else: 
+                        active_header = 'unrelated header' 
+                    if active_header not in header_dict:
+                        header_dict[active_header] = []
                     break
                 if fuzz.ratio(header, line.lower()) > 75:
-                    active_header = header
-                    header_dict[active_header] = []
-                    break 
-            if active_header == line.lower() or fuzz.ratio(header, line.lower()) > 75:
+                    found_header = True
+                    if header in EDUCATION_HEADERS:
+                        active_header = 'education'
+                    elif header in EXPERIENCE_HEADERS:
+                        active_header = 'experience'
+                    elif header in SKILLS_HEADERS:
+                        active_header = 'skills'
+                    elif header in PROJECT_HEADERS:
+                        active_header = 'projects'
+                    elif header in CERTIFICATION_HEADERS:
+                        active_header = 'certifications'
+                    else: 
+                        active_header = 'unrelated header'  
+                    if active_header not in header_dict:
+                        header_dict[active_header] = []
+                    break
+            if found_header:
+                found_header = False
                 continue
-            
             header_dict[active_header].append(line)
 
         for header in header_dict:
