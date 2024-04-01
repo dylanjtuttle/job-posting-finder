@@ -2,6 +2,8 @@ from resume_parsing.resume_parsing import parse_resume
 from context_matching.context_matching import get_w2v_model, context_matching
 from posting_parsing.posting_parsing import get_job_data_from_site
 
+import heapq
+
 def main():
     resume_path = input("Enter the path to the resume you would like to match:\n")
 
@@ -18,6 +20,13 @@ def main():
 
     # Perform context matching
     postings_with_score = context_matching(resume_dict, postings, w2v_model)
+
+    print("")
+    print("Here are the 10 best job postings we've found for you:")
+    i = 0
+    for entry in heapq.nlargest(10, postings_with_score):
+        print(f"{i + 1} ({entry.score}): {entry.posting["url"]}")
+        i += 1
     
 if __name__ == "__main__":
     main()
