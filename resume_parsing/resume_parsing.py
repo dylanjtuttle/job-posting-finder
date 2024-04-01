@@ -36,7 +36,7 @@ def parse_resume(path):
         header_dict[active_header] = []
         for line in lines:
             for header in HEADERS:
-                if line.lower() == header:
+                if line.lower() == header or fuzz.ratio(header, line.lower()) > 75:
                     found_header = True
                     if header in EDUCATION_HEADERS:
                         active_header = 'education'
@@ -50,23 +50,6 @@ def parse_resume(path):
                         active_header = 'certifications'
                     else: 
                         active_header = 'unrelated header' 
-                    if active_header not in header_dict:
-                        header_dict[active_header] = []
-                    break
-                if fuzz.ratio(header, line.lower()) > 75:
-                    found_header = True
-                    if header in EDUCATION_HEADERS:
-                        active_header = 'education'
-                    elif header in EXPERIENCE_HEADERS:
-                        active_header = 'experience'
-                    elif header in SKILLS_HEADERS:
-                        active_header = 'skills'
-                    elif header in PROJECT_HEADERS:
-                        active_header = 'projects'
-                    elif header in CERTIFICATION_HEADERS:
-                        active_header = 'certifications'
-                    else: 
-                        active_header = 'unrelated header'  
                     if active_header not in header_dict:
                         header_dict[active_header] = []
                     break
