@@ -34,6 +34,7 @@ def webscrape_site(home_url, filename):
     job_list = []
 
     page_url = home_url + "/search-jobs?q=software+development&location=#page=1"
+    page_number = 1
 
     print(f"Scraping job postings from {home_url}...")
     while True:
@@ -51,15 +52,14 @@ def webscrape_site(home_url, filename):
 
         next_button = soup.find("a", attrs={"class": "btn btn-custom btn-default btn-sm" , "alt": "Next"})
 
-        if next_button == None: 
+        if next_button is None or page_number > 5: 
             f = open(filename, "w")
-            # sys.setrecursionlimit(10000000)
-            nice_data = {}
             json.dump({"date": datetime.datetime.now().strftime("%d/%m/%Y"), "job_list": job_list}, f)
             f.close()
             return job_list
 
         page_url = home_url + next_button["href"]
+        page_number += 1
 
 
 #Takes a list of jobs for alberta job board. 

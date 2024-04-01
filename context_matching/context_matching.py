@@ -29,17 +29,17 @@ def context_matching(resume_dict, job_postings, w2v_model):
         # 'projects'
         # 'certifications'
 
-        # Get the job title from the posting
-        posting_title = posting["title"]
+        # Get the job description from the posting
+        posting_descrip = posting["descrip"]
         # If the user's resume has an experience section
         if "experience" in resume_dict:
             user_jobs = resume_dict["experience"]
 
             sum = 0
             count = 0
-            for posting_word in posting_title.split(" "):
+            for posting_word in word_tokenize(posting_descrip):
                 for line in user_jobs:
-                    for resume_word in line.split(" "):
+                    for resume_word in word_tokenize(line):
                         posting_word = posting_word.lower()
                         resume_word = resume_word.lower()
 
@@ -54,6 +54,9 @@ def context_matching(resume_dict, job_postings, w2v_model):
             if average > best_score:
                 best_score = average
                 best_posting = posting
+    
+    print(best_score)
+    print(best_posting)
 
     return postings_with_score
 
