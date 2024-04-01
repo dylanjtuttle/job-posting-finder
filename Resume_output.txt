@@ -1,118 +1,457 @@
 SKILLS
 ----------
-Python, Java, C#, C, C++, SQL, Haskell, Prolog, JavaScript, HTML, CSS, ARMv8 Assembly
-Libraries/APIs
-Unity API, Discord API, Twitter API
-GitHub/GitLab, Unity Engine, Visual Studio
-Code, GIMP, LaTeX
-Operating Systems
-UNIX/Linux, MacOS X, Windows
-Spoken Languages
-English, French
+Developer
+jdylantuttle@gmail.com
+(403)
+614-1181
+github.com/dylanjtuttle
+linkedin.com/in/dylantuttle
+GitHub,
+GitLab,
+Android
+Studio,
+Jira,
+SourceTree,
+Tableau
+development
+team
+
+Slack
+
+Zoom
+Participated
+
+peer
+code
+reviews
+Became
+familiar
+
+common
+design
+principles,
+
+
+encapsulation,
+DRY,
+code
+refactoring,
+
+self-documenting
+code
+WORK
+Developer
+Intern
+May
+
+Aug
+2022,
+Kaleden,
+BC
+Developed
+
+Delay
+Model
+Server
+(DMS)
+
+
+Dominion
+Radio
+Astrophysical
+Observatory
+Synthesis
+Telescope
+upgrade
+program
+written
+
+FORTRAN
+
+calculate
+delay
+models
+Made
+Translator
+May
+
+Sep
+2021,
+Calgary,
+AB
+github.com/dylanjtuttle/rmap
+Worked
+
+
+supervision
+
+Dr.
+Jo-Anne
+Brown
+
+rewrite
+
+research-critical
+data
+pipeline
+program
+comprised
+
+legacy
+IDL
+code
+
+Python
+Addressed
+decades
+
+technical
+debt,
+refactoring
+
+new,
+documented
+Python
+code
+
+ease
+
+future
+updates
+
+enhancements
+Reverse
+engineered
+correct
+program
+output
+without
+well-defined
+requirements
+Laboratory
+Teaching
+Assistant
+Jan
+
+May
+2021
+Supervised
+
+first-year
+physics
+laboratory
+
+Zoom,
+assisting
+nearly
+200
+students
+every
+week
+
+EDUCATION
+----------
+University
+
+Calgary
+BSc
+Computer
+Science,
+BSc
+Astrophysics,
+Sep
+2017
+Apr
+2024,
+Calgary,
+AB
+changes
+
+DiFXCalc
+source
+code
+
+better
+align
+
 
 UNRELATED HEADER
 ----------
-B.Sc.
-Computer Science (Major)
-University Calgary
-Completed
-Design & Analysis Algorithms
-Arti/uniFB01cial Intelligence
-Reverse engineering
-Principle Operating Systems
-Intro Software Engineering
-Data Base Management Systems
-Computing Machinery I & II
-Theoretical Foundations CPSC I & II
-Data Structures & Algorithms
-Information Security & Privacy
-Functional Programming Paradigms
-Linear Methods
-Calculus I & II
-In Progress
-Human Computer Interaction
-AI Games
-Natural Language Processing
-Visual Studies & Art History (Minor)
-University Calgary
-Generative Art
-Media Arts: Practice & Theory
-Drawing
-2D & 3D Fundamentals
-Painting: Figuration
-History Video GamesEDUCATION
-University Calgary
-5September 2020  Present /map_markerCalgary, Canada
-Expected Graduation Date: May 2024
-Cumulative GPA: 3.67
-B.Sc.
-Computer Science (Major)
-Visual Studies & Art History (Minor)
+C,
+C++,
+Rust,
+Python,
+Java,
+Haskell,
+Prolog,
+ARMv8
+Assembly,
+R,
+SQL,
+HTML,
+CSS
+Libraries/APIs
+CMake,
+GoogleTest,
+TANGO,
+OpenGL,
+JUnit,
+JavaFX,
+Matplotlib,
+NumPy,
+Pandas,
+MySQL
+Misc.
+I
+designed
+Compiler
+takes
+
+single
+.soup
+le
+
+compiles
+
+
+ARMv8
+assembly
+Developed
+automated
+unit
+tests
+
+set
+
+
+CI
+pipeline
+
+run
+
+tests
+every
+time
+new
+code
+
+pushed
+
+
+repository
+Wrote
+
+detailed
+speci cation,
+stored
+
+
+repository
+wiki:
+github.com/dylanjtuttle/soup/wiki
+MeowioKart
+Developed
+
+2D
+retro
+driving
+game
+loosely
+based
+
+Mario
+Kart
+entirely
+
+C
+
+
+Raspberry
+Pi
+
+
+partner
+
+
+class
 
 PROJECTS
 ----------
-Meowdoku
-Android Sudoku app designed using Unity Engine
-Unity API.
-All hand-drawn assets UI.
-Sudoku solver programmed
-system.
-Learned C# Unity API
-https:/ /github.com/kayleenasser/Meowdoku
-Command Line Sudoku
-Basic Sudoku game runs command line
-Code includes Sudoku solver/generator
-Henry Bot
-A discord bot used play music YouTube voice calls.
-Made friends.
-Learned Youtube Discord API
-MeowioKart
-A 2D pixel game based around MarioKart programmed exclusively C.
-Every pixel programmed manually.
-Program runs Raspberry Pi.
-Visuals drawn converted code GIMP.
-HONORS & AWARDS
-University Calgary Deans List
-2020 - 2021
-2021 - 2022
-Jason Lang Scholarship - January 2022
-University Calgary Entrance Scholarship - September 2020
-$2500 Rutherford Scholarship - September 2020
-High School Academic Honors Distinction Award - June
-2018, 2019, 2020
-High School Advanced Placement Art Award - June 2019,
-2020
-KAYLEE NASSER
-B.Sc.
-Computer Science
-/_475kayleenasser@gmail.com /phone403-404-8833 /githubhttps:/ /github.com/kayleenasser /linkedinlinkedin.com/in/kaylee-nasser-433056249
+Soup
+
+A
+simple
+compiler
+built
+
+Rust
+
+github.com/dylanjtuttle/soup
+Developed
+
+compiler
+
+
+simple
+Designed
+4
+levels
+
+
+player
+
+drive
+through,
+avoiding
+various
+obstacles
+
+obtaining
+powerups
+
+reach
+
+end
+
+time
+runs
+
+Drew
+assets
+
+
+screen
+pixel-by-pixel
+using
+
+RPi
+framebuffer
+Playlist
+Defender
+github.com/dylanjtuttle/playlist-defender
+Built
+
+native
+Android
+app
+using
+Python
+
+
+two-person
+team
+Worked
+
+
+remote
+collaboration
+Wrote
+
+C++
+wrapper
+around
+DiFXCalc,
+
+NASA
+GSFC
+requirements
+Implemented
+
+PyTango
+device
+server
+
+allow
+
+convenient
+interaction
+
+
+DMS
+
+
+components
+
+
+telescope
+Wrote
+comprehensive
+automated
+tests
+using
+GoogleTest
+
+PyTest
+Created
+multiple
+documents
+
+rigorously
+define
+design
 
 EXPERIENCE
 ----------
-Software Test Specialist Co-op
-Magnet Forensics
-5May 2023 - December 2023
-Implemented testing strategys Magnets AXIOM Corporate Products.
-Worked closely developers creating
-quality products help create cases corporate litigation.
-Speci/uniFB01cally, I worked features UI test automation
-using Test Studio, running automation Jenkins, working DevOps jobs times, manually testing
-products.
-Front House Salesperson
-Pie Junkie
-5July 2020 - July 2021
-Worked handling customers person, online, phone, organizing front, packing orders, baking
-pies.
-Stage Manager
-Calgary Young Peoples Theatre
-5August 2017 - May 2018
-Stage Managed play cannonball festival volunteer stage manager.
-Organized actors technical elements
-show.
-Summer Camp Skating Instructor
-Westside Recreation Centre
-5June 2017 - February 2018
-Volunteered kids ages 3-12, helped coordinate activities assisted councillors.
-In winter I taught basics
-skating hockey children parents.
+IBM
+Compiler
+Developer
+Intern
+May
+2023
+
+Dec
+2023,
+Markham,
+ON
+Found
+
+fixed
+assertion
+failures
+
+warnings
+throughout
+
+codebase,
+helping
+empower
+
+team
+
+enable
+asserts
+
+fatal
+warnings,
+ensuring
+fewer
+bugs
+make
+
+
+customers
+National
+Research
+Council
+Canada
+
+CERTIFICATIONS
+----------
+
+interfaces
+
+
+DMS
+
+
+components
+
+
+telescope
+University
+
+Calgary
+Research
+Assistant
+
 

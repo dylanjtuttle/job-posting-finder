@@ -51,7 +51,7 @@ def context_matching(resume_dict, job_postings, w2v_model):
         # If the user's resume has a certifications section,
         # perform a certification match with the posting
         if "certifications" in resume_dict:
-            posting_score += certification_match(w2v_model, resume_dict, posting)
+            posting_score += certification_match(resume_dict, posting)
         
         # Insert a new PostingWithScore object into the heap
         heapq.heappush(postings_with_score, PostingWithScore(posting, posting_score))
@@ -80,7 +80,7 @@ def experience_match(w2v_model, resume_dict, posting):
                                     posting["soft_skills"]])
 
     # Get the user's experience
-    user_jobs = resume_dict["experience"]
+    user_experience = resume_dict["experience"]
 
     sum = 0
     count = 0
@@ -88,7 +88,7 @@ def experience_match(w2v_model, resume_dict, posting):
     # with every word in the synthesized experience from the posting
     for posting_word in word_tokenize(posting_experience):
         if posting_word not in PUNCTUATION and posting_word not in stop_words:
-            for line in user_jobs:
+            for line in user_experience:
                 for resume_word in word_tokenize(line):
                     if resume_word not in PUNCTUATION and posting_word not in stop_words:
                         posting_word = posting_word.lower().strip()
@@ -101,7 +101,7 @@ def experience_match(w2v_model, resume_dict, posting):
                         # Skip any words that don't appear in the model's vocabulary
                         except:
                             continue
-    
+
     # Return the average similarity of all the words
     if count == 0:
         return 0
