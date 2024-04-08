@@ -228,23 +228,36 @@ def certification_match(resume_dict, posting):
 
 def get_w2v_model(resume_dict, job_postings):
     try:
+        # If a model trained on only the old data exists, load it and train it on some new data as well
         saved_model = Word2Vec.load(MODEL_FILE)
+
+        extra_training_data = get_new_training_data(resume_dict, job_postings)
+
+        saved_model.build_vocab(extra_training_data, update=True)
+        saved_model.train(extra_training_data, total_examples=saved_model.corpus_count, epochs=30, report_delay=1)
+
         return saved_model
     except:
-        training_data = get_w2v_training_data(resume_dict, job_postings)
+        # Otherwise train a new model on the old and new data
+        training_data = get_w2v_training_data()
 
         w2v_model = Word2Vec(training_data, vector_size=100, window=3, min_count=1, sg=0)
         w2v_model.train(training_data, total_examples=w2v_model.corpus_count, epochs=30, report_delay=1)
         w2v_model.init_sims(replace=True)
 
+        # Save the model trained on only the old data
         w2v_model.save(MODEL_FILE)
+
+        # Now also train it on the new data
+        extra_training_data = get_new_training_data(resume_dict, job_postings)
+
+        w2v_model.build_vocab(extra_training_data, update=True)
+        w2v_model.train(extra_training_data, total_examples=w2v_model.corpus_count, epochs=30, report_delay=1)
 
         return w2v_model
 
 
-def get_w2v_training_data(resume_dict, job_postings):
-    print("Training a quick context matching model...")
-
+def get_w2v_training_data():
     training_data = []
 
     with open('context_matching/monster_com-job_sample.csv', newline='', encoding="utf8") as csvfile:
@@ -299,34 +312,40 @@ def get_w2v_training_data(resume_dict, job_postings):
                             new_sentence.append(word.lower())
                     if len(new_sentence) > 0:
                         training_data.append(new_sentence)
-        
-        # Add the user's resume to the training data
-        for key, value in resume_dict.items():
-            for sentence in value:
-                new_sentence = []
-                for word in word_tokenize(sentence):
-                    if '.' in word:
-                        word = word.replace('.', '')
-                    if ',' in word:
-                        word = word.replace(',', '')
-                    if word != '':
-                        new_sentence.append(word.lower())
-                if len(new_sentence) > 0:
-                    training_data.append(new_sentence)
-        
-        # Add the job postings to the training data
-        for posting in job_postings:
-            for key, value in posting.items():
-                new_sentence = []
 
-                for word in word_tokenize(value):
-                    if '.' in word:
-                        word = word.replace('.', '')
-                    if ',' in word:
-                        word = word.replace(',', '')
-                    if word != '':
-                        new_sentence.append(word.lower())
-                if len(new_sentence) > 0:
-                    training_data.append(new_sentence)
+    return training_data
+
+
+def get_new_training_data(resume_dict, job_postings):
+    training_data = []
+
+    # Add the user's resume to the training data
+    for key, value in resume_dict.items():
+        for sentence in value:
+            new_sentence = []
+            for word in word_tokenize(sentence):
+                if '.' in word:
+                    word = word.replace('.', '')
+                if ',' in word:
+                    word = word.replace(',', '')
+                if word != '':
+                    new_sentence.append(word.lower())
+            if len(new_sentence) > 0:
+                training_data.append(new_sentence)
+    
+    # Add the job postings to the training data
+    for posting in job_postings:
+        for key, value in posting.items():
+            new_sentence = []
+
+            for word in word_tokenize(value):
+                if '.' in word:
+                    word = word.replace('.', '')
+                if ',' in word:
+                    word = word.replace(',', '')
+                if word != '':
+                    new_sentence.append(word.lower())
+            if len(new_sentence) > 0:
+                training_data.append(new_sentence)
 
     return training_data
