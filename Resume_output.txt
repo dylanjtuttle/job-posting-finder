@@ -1,38 +1,40 @@
+SKILLS
+----------
+AI Big Data Experienced Pandas, NumPy, PyTorch, Tensorflow
+Programming langauges Proficient Python, Java, C, C++
+
 EDUCATION
 ----------
-Twin Rivers University
-Bachelor's computer science
+Bachelors degree Computer Science University Calgary
+Honours Bachelors degree program September 2019 - April 2024
+GPA: 3.8/4.0
+Took courses AI techniques, operating systems embedded programming, data structures.
+Learned practical skills using IDEs GitHub.
+Lockhart Computer Science Award For outstanding research academic performance
+Deans List For high academic performance
 
 EXPERIENCE
 ----------
-Blue Valley Technology Group | Denver, CO, Java Developer
-June 2021  Current
- Participate lifecycle development three web applications
- Update existing client web applications analyzing current web specifications,
-reviewing web traffic proofreading established code
- Collaborate customers developers determine project needs technical
-concerns
- Troubleshoot website codes identify correct errors improved website usability
- Write website instructional manuals help educate stakeholders website
-construction
-Tennent Technologies | Denver, CO, Java Developer Intern
-May 2019  May 2021
- Developed interactive designs promote positive user experience
- Performed website testing identify errors items might detract
-
-UNRELATED HEADER
-----------
- Wrote code direction Java developer reviewed final website codes
-
-CERTIFICATIONS
-----------
- Oracle Certified Associate Java Programmer
-
-SKILLS
-----------
- Troubleshooting
- Attention detail
- Problem -solving
- Communication
- Object -oriented programming
+Teaching Assistant January 2022 - Present
+University Calgary Calgary, Alberta
+Lead twice-weekly tutorial section twenty five students I taught practical skills needed
+courses including C++, STL containers, multithreaded applications, embedded systems.
+Other duties include marking students work, answering questions providing one-on-one support.
+Research Assistant May 2022 - August 2022
+University Calgary Calgary, Alberta
+Utilizied skills assembly reverse engineering analyze Atari 2600 games using reinforcement
+learning gain deeper understanding historical programming techniques.
+Summer Camp Leader June 2018 - August 2019
+Minds Motion Summer Camps Calgary, Alberta
+Taught elementary junior high girls skills programming, video game development, web
+design.
+AI Researcher July - August 2021
+University Washington Seattle, Washington
+Worked Partners Health local Seattle non-profit, Medic Mobile help create reliable
+routing triage systems door-to-door healthcare workers.
+Utilized classical AI techniques machine learning techniques create applications.
+Research Fellow May - June 2021
+AI4Good Labs Edmonton, Alberta
+Attended four-week long intensive course supervised, unsupervised, reinforcement learning.
+Programmed computer vision algorithm would detect waste photos create comprehensive map litter help facilitate community clean ups.
 
