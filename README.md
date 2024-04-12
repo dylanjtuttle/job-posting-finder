@@ -1,10 +1,10 @@
 # job-posting-finder
 A project for CPSC 599.27 (Natural Language Processing), using NLP technology to recommend a user relevant computer science job postings based on their resume
 
-## Authors:
-Dylan Tuttle
-Kaylee Nasser
-Rachel Ralph
+# Authors:
+- Dylan Tuttle
+- Kaylee Nasser
+- Rachel Ralph
 
 # Project Structure
 - `main.py` contains logic involving prompting the user for a path to a resume, executing the three subsections of the project (resume parsing, job posting scraping, and context matching), and returning the results of the context matching in the form of the URLs of the 10 job postings that best suit the user's resume.
